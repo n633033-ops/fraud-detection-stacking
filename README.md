@@ -1,5 +1,14 @@
 # Phát hiện gian lận giao dịch bằng Stacking Ensemble
+## 📊 Dữ liệu sử dụng (Dataset)
 
+Dự án này sử dụng bộ dữ liệu **PaySim** mô phỏng các giao dịch tài chính trên thiết bị di động để phát hiện gian lận. 
+Do dung lượng file khá lớn, dữ liệu không được tải trực tiếp lên kho lưu trữ này. Bạn có thể xem chi tiết và tải file dữ liệu gốc (`.csv`) tại Kaggle:
+
+👉 **[Synthetic Financial Datasets For Fraud Detection (Kaggle)](https://www.kaggle.com/datasets/ealaxi/paysim1)**
+
+**Thông tin sơ lược về dữ liệu:**
+*   Dữ liệu bao gồm các đặc trưng như: `step`, `type`, `amount`, `oldbalanceOrg`, `newbalanceOrig`,...
+*   Biến mục tiêu (Target variable): `isFraud` (1 là gian lận, 0 là bình thường).
 Dự án xây dựng mô hình phát hiện giao dịch tài chính gian lận trên dữ liệu mất cân bằng nghiêm trọng, kết hợp ba mô hình (Random Forest, LightGBM, XGBoost) bằng kỹ thuật **stacking**, kèm ứng dụng **Streamlit** để nhập giao dịch thủ công và xem phân tích độ quan trọng của đặc trưng.
 
 > Dự án được thực hiện với sự hỗ trợ của công cụ AI (Claude) trong quá trình viết code; phần chạy thực nghiệm, kiểm tra kết quả và phân tích do mình thực hiện.
